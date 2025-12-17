@@ -8,38 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --main-red: #e50914; --bg-dark: #0b0c10; --card-bg: #1a1c22; }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 5%;
-            background: #000;
-        }
-
-        .logo img.main-logo {
-            height: 100px; /* ปรับความสูงตามความต้องการ */
-            max-width: 200px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-            transition: 0.3s;
-        }
-
-        .logo img.main-logo:hover {
-            transform: scale(1.05); /* ขยายเล็กน้อยเวลาเอาเมาส์ชี้ */
-        }
+        
         body { background: var(--bg-dark); color: white; font-family: 'Tahoma', sans-serif; margin: 0; padding-bottom: 100px; }
 
-        /* Social & Header */
+        /* Header & Logo */
+        .header { background: #111; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--main-red); }
+        .logo img.main-logo { height: 100px; max-width: 200px; width: auto; display: block; object-fit: contain; transition: 0.3s; }
+        .logo img.main-logo:hover { transform: scale(1.05); }
+
         .top-bar { background: #000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
         .social-icons a { color: #fff; margin-left: 15px; font-size: 18px; }
-        .header { background: #111; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--main-red); }
-        .logo { color: var(--main-red); font-size: 32px; font-weight: bold; text-decoration: none; }
         .search-box input { padding: 10px 20px; border-radius: 20px; border: none; background: #222; color: #fff; width: 300px; }
 
         /* Nav */
         .nav-cat { background: #1a1a1a; padding: 10px 5%; display: flex; gap: 20px; overflow-x: auto; }
-        .nav-cat a { color: #ccc; text-decoration: none; font-weight: bold; font-size: 14px; cursor: pointer; }
+        .nav-cat a { color: #ccc; text-decoration: none; font-weight: bold; font-size: 14px; cursor: pointer; white-space: nowrap; }
         .nav-cat a:hover { color: var(--main-red); }
 
         /* Grid */
@@ -50,6 +33,13 @@
         .card img { width: 100%; height: 260px; object-fit: cover; }
         .card-title { padding: 10px; text-align: center; font-size: 14px; }
         .q-tag { position: absolute; top: 10px; right: 10px; background: var(--main-red); padding: 2px 7px; border-radius: 3px; font-size: 11px; }
+
+        /* Pagination Style (เพิ่มใหม่) */
+        .pagination-container { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 40px 0; flex-wrap: wrap; }
+        .page-btn { background: #1a1c22; color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; min-width: 40px; transition: 0.2s; }
+        .page-btn:hover:not([disabled]) { background: #333; border-color: var(--main-red); color: #fff; }
+        .page-btn.active { background: var(--main-red); color: #fff; border-color: #fff; }
+        .page-btn[disabled] { opacity: 0.3; cursor: default; }
 
         .sticky-ads { position: fixed; bottom: 0; width: 100%; text-align: center; background: rgba(0,0,0,0.9); padding: 10px; z-index: 999; }
     </style>
@@ -74,35 +64,96 @@
         <a onclick="filter('drama')">ดราม่า</a>
         <a onclick="filter('horror')">สยองขวัญ</a>
         <a onclick="filter('anime')">อนิเมะ</a>
-        <a onclick="filter('serie')">ชีรีย์</a>
+        <a onclick="filter('serie')">ซีรีย์</a>
     </nav>
+
     <div class="container">
         <h2 id="cat-title">รายการหนังแนะนำ</h2>
         <div class="movie-grid" id="grid"></div>
+        
+        <div id="pagination" class="pagination-container"></div>
     </div>
-    <div class="sticky-ads"><img src="https://via.placeholder.com/728x90?text=ADS+BANNER+CLICK+HERE" style="max-width:90%"></div>
+
+    <div class="sticky-ads">
+        <img src="https://via.placeholder.com/728x90?text=ADS+BANNER+CLICK+HERE" style="max-width:90%">
+    </div>
 
     <script src="data.js"></script>
     <script>
-        const grid = document.getElementById('grid');
+        // --- ส่วนควบคุมระบบ Pagination ---
+        let currentPage = 1;
+        const itemsPerPage = 21; // ปรับจำนวนหนังต่อหน้าได้ที่นี่
+        let currentData = [...movieDatabase]; 
+
         function render(data) {
-            grid.innerHTML = data.map(m => `
+            const grid = document.getElementById('grid');
+            
+            // คำนวณ Slice ข้อมูล
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = data.slice(start, end);
+
+            grid.innerHTML = paginatedItems.map(m => `
                 <div class="card" onclick="location.href='play.html?id=${m.id}'">
                     <div class="q-tag">${m.quality}</div>
                     <img src="${m.poster}">
                     <div class="card-title">${m.title}</div>
                 </div>
             `).join('');
+
+            renderPagination(data.length);
         }
+
+        function renderPagination(totalItems) {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            const paginationBox = document.getElementById('pagination');
+            
+            if (totalPages <= 1) { paginationBox.innerHTML = ''; return; }
+
+            let html = '';
+            // ปุ่มก่อนหน้า
+            html += `<button class="page-btn" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>«</button>`;
+
+            // เลขหน้า
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    html += `<span style="color:#444">...</span>`;
+                }
+            }
+
+            // ปุ่มถัดไป
+            html += `<button class="page-btn" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>»</button>`;
+            
+            // ปุ่มหน้าสุดท้าย
+            html += `<button class="page-btn" onclick="changePage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>»»</button>`;
+
+            paginationBox.innerHTML = html;
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            render(currentData);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         function doSearch() {
             const val = document.getElementById('search').value.toLowerCase();
-            render(movieDatabase.filter(m => m.title.toLowerCase().includes(val)));
+            currentData = movieDatabase.filter(m => m.title.toLowerCase().includes(val));
+            currentPage = 1; // รีเซ็ตหน้าเมื่อค้นหา
+            render(currentData);
         }
+
         function filter(c) {
-            render(c === 'all' ? movieDatabase : movieDatabase.filter(m => m.category === c));
+            currentData = (c === 'all' ? movieDatabase : movieDatabase.filter(m => m.category === c));
+            currentPage = 1; // รีเซ็ตหน้าเมื่อกรองหมวดหมู่
+            render(currentData);
             document.getElementById('cat-title').innerText = "หมวดหมู่: " + c.toUpperCase();
         }
-        render(movieDatabase);
+
+        // เริ่มต้นรันหน้าเว็บ
+        render(currentData);
     </script>
 </body>
 </html>
