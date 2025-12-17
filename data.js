@@ -207,4 +207,49 @@ const movieDatabase = [
         poster: "https://pic6.iqiyipic.com/image/20230921/50/22/v_173794521_m_601_en_260_360.webp",
         url: "https://master.streamhls.com/hls/c565fb7b19232aed5f29dd20543597ab/master.m3u8"
     },
+    {
+        id: "m20",
+        type: "movie",
+        title: "omahawk Action 2 Bloodthirsty (2023) ปฏิบัติการโทมาฮอว์ก 2 นองเลือด",
+        quality: "HD",
+        category: "action",
+        poster: "https://pic3.iqiyipic.com/image/20230726/e2/ed/v_173206106_m_601_en_260_360.webp",
+        url: "https://master.streamhls.com/hls/9f584045aaec7a7b91eef44245c0f176/master.m3u8"
+    },
+    {
+        id: "m21",
+        type: "movie",
+        title: "Dollhouse (2025) ดอลล์เฮ้าส์ หลอนซ่อนหุ่น",
+        quality: "HD",
+        category: "horror",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDFlNjliZmMtNWZjNC00NWY2LTkxZmEtNWRmMTg1ZGI5OWQ4XkEyXkFqcGc@._V1_.jpg",
+        url: "https://master.streamhls.com/hls/8ac9f133d07371009a4cb902dfc95665/master.m3u8"
+    },
+    {
+        id: "m22",
+        type: "movie",
+        title: "เสือ (2025) 4 Tigers",
+        quality: "ZOOM",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BYjgzZjg2YmQtZWI1OC00NjI0LWEyNDItZjA5OTgzMWU0ODY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        url: "https://master.streamhls.com/hls/f2944f401f5cac66d4e5dd7ae5bffc2d/master.m3u8"
+    },
+    {
+        id: "m23",
+        type: "movie",
+        title: "Afterburn (2025) ล่าขุมทรัพย์แดนแดดเดือด",
+        quality: "HD",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BMzBkZmQ0NjMtNTZlMy00ZjdlLTg5ODUtYWFlNGM0YzE3MTg0XkEyXkFqcGc@._V1_.jpg",
+        url: "https://master.streamhls.com/hls/d4c5dc4d7b1a5acd22279785300f61c8/master.m3u8"
+    },
+    {
+        id: "m24",
+        type: "movie",
+        title: "One Battle After Another (2025) หนึ่งศึก ครั้งแล้ว ครั้งเล่า",
+        quality: "HD",
+        category: "action",
+        poster: "https://cdn.majorcineplex.com/uploads/movie/4649/thumb_4649.jpg",
+        url: "https://master.streamhls.com/hls/fe5ab8d6e1500eac986c49023b4b9811/master.m3u8"
+    },
 ];
