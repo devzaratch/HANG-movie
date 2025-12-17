@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --main-red: #e50914; --bg-dark: #0b0c10; --card-bg: #1a1c22; }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            background: #000;
+        }
+
+        .logo img.main-logo {
+            height: 100px; /* ปรับความสูงตามความต้องการ */
+            max-width: 200px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: 0.3s;
+        }
+
+        .logo img.main-logo:hover {
+            transform: scale(1.05); /* ขยายเล็กน้อยเวลาเอาเมาส์ชี้ */
+        }
         body { background: var(--bg-dark); color: white; font-family: 'Tahoma', sans-serif; margin: 0; padding-bottom: 100px; }
 
         /* Social & Header */
@@ -38,12 +58,14 @@
     <div class="top-bar">
         <span>ดูหนังออนไลน์พากย์ไทย อัปเดต 2025</span>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61577060775782"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-line"></i></a>
         </div>
     </div>
     <header class="header">
-        <a href="index.html" class="logo">UFA-MOVIE</a>
+        <a href="index.html" class="logo">
+            <img src="favicon.png" alt="Logo" class="main-logo">
+        </a>
         <div class="search-box"><input type="text" id="search" placeholder="พิมพ์ชื่อหนัง..." onkeyup="doSearch()"></div>
     </header>
     <nav class="nav-cat" id="cats">
