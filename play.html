@@ -2,32 +2,44 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Watching | 038-MOVIE</title>
+    <title>Watching | HANG-MOVIE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background: #0b0c10; color: #fff; font-family: sans-serif; margin: 0; }
-        .nav { padding: 15px 5%; background: #000; }
-        .player-container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .artplayer-app { width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; }
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
+        .nav-back { padding: 15px; background: #111; }
+        .player-container { max-width: 1000px; margin: 20px auto; padding: 0 15px; position: relative; }
         
-        /* Episode List */
-        .ep-list { margin-top: 20px; background: #1a1c22; border-radius: 8px; overflow: hidden; }
-        .ep-item { padding: 15px; border-bottom: 1px solid #333; cursor: pointer; display: none; } /* ซ่อนไว้ก่อนถ้าเป็นหนัง */
-        .ep-item.active { color: #ff0000; background: #222; border-left: 4px solid #ff0000; }
-        .ep-item:hover { background: #252525; }
+        /* AD OVERLAY */
+        .ad-layer { position: absolute; top: 0; left: 15px; right: 15px; bottom: 0; background: rgba(0,0,0,0.95); z-index: 100; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .btn-skip { position: absolute; bottom: 50px; right: 30px; background: #333; color: #fff; border: 1px solid #777; padding: 12px 25px; border-radius: 5px; cursor: not-allowed; }
+        .btn-skip.ready { background: #e50914; cursor: pointer; border-color: #fff; }
+        .btn-reg { position: absolute; top: 30px; right: 30px; background: #f5c518; color: #000; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+        .artplayer-app { width: 100%; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; }
+        .ep-list { margin-top: 20px; background: #1a1c22; border-radius: 8px; }
+        .ep-item { padding: 15px; border-bottom: 1px solid #333; cursor: pointer; }
+        .ep-item.active { background: #222; border-left: 4px solid red; color: red; }
     </style>
 </head>
 <body>
-
-    <div class="nav"><a href="index.html" style="color:red; text-decoration:none;">← กลับหน้าแรก</a></div>
-
+    <div class="nav-back"><a href="index.html" style="color:red; text-decoration:none;">← กลับหน้าแรก</a></div>
+    
     <div class="player-container">
+        <div id="adLayer" class="ad-layer">
+            <video id="adVideo" autoplay>
+                <source src="UFA.mp4" type="video/mp4">
+            </video>
+            <a href="https://ufasboclubauto.com/register" class="btn-reg">สมัครสมาชิก</a>
+            <button id="skipBtn" class="btn-skip" disabled>รอ <span id="timer">3</span> วิ</button>
+        </div>
+
         <div class="artplayer-app"></div>
-        <h1 id="title" style="margin-top:20px;"></h1>
+        <h1 id="m-title" style="margin:20px 0 10px;"></h1>
         
-        <div class="ep-list" id="epBox">
-            <div style="padding:15px; background:red; font-weight:bold;">เลือกตอนรับชม</div>
+        <div class="ep-list" id="epBox" style="display:none;">
+            <div style="padding:15px; background:#333; font-weight:bold;">เลือกตอนรับชม</div>
             <div id="epItems"></div>
         </div>
     </div>
@@ -36,32 +48,26 @@
     <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
     <script src="data.js"></script>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const movie = movieDatabase.find(m => m.id === urlParams.get('id'));
-        let currentEp = 0;
+        const id = new URLSearchParams(window.location.search).get('id');
+        const m = movieDatabase.find(x => x.id === id);
+        let cur = 0;
 
-        if (movie) {
-            document.getElementById('title').innerText = movie.title;
-            
-            // ตั้งค่าเริ่มต้นของวิดีโอ
-            const videoUrl = movie.type === 'series' ? movie.episodes[0].url : movie.url;
+        if (m) {
+            document.getElementById('m-title').innerText = m.title;
+            const startUrl = m.type === 'series' ? m.episodes[0].url : m.url;
 
             const art = new Artplayer({
                 container: '.artplayer-app',
-                url: videoUrl,
+                url: startUrl,
                 type: 'm3u8',
                 pip: true,
                 setting: true,
                 fullscreen: true,
-                lock: true, // ล็อคหน้าจอสำหรับมือถือ
-                controls: movie.type === 'series' ? [
-                    {
-                        position: 'right',
-                        html: '<i class="fas fa-step-forward"></i>',
-                        tooltip: 'ตอนถัดไป',
-                        click: () => changeEp(currentEp + 1)
-                    }
-                ] : [],
+                controls: m.type === 'series' ? [{
+                    position: 'right',
+                    html: '<i class="fas fa-step-forward"></i>',
+                    click: () => changeEp(cur + 1)
+                }] : [],
                 customType: {
                     m3u8: (video, url) => {
                         const hls = new Hls();
@@ -71,28 +77,56 @@
                 }
             });
 
-            // ถ้าเป็นซีรีส์ ให้สร้างรายการตอน
-            if (movie.type === 'series') {
-                const box = document.getElementById('epItems');
-                movie.episodes.forEach((ep, i) => {
-                    const div = document.createElement('div');
-                    div.className = `ep-item ${i === 0 ? 'active' : ''}`;
-                    div.style.display = 'block';
-                    div.innerText = `${movie.title} - ${ep.title}`;
-                    div.onclick = () => changeEp(i);
-                    box.appendChild(div);
-                });
-            } else {
-                document.getElementById('epBox').style.display = 'none';
+            // AD TIMER LOGIC
+            let count = 3;
+            const t = setInterval(() => {
+                count--;
+                if(count > 0) document.getElementById('timer').innerText = count;
+                else {
+                    clearInterval(t);
+                    const b = document.getElementById('skipBtn');
+                    b.innerText = "ข้ามโฆษณา"; b.disabled = false; b.classList.add('ready');
+                }
+            }, 1000);
+
+            document.getElementById('skipBtn').onclick = function() {
+                const adVideo = document.getElementById('adVideo');
+                const adLayer = document.getElementById('adLayer');
+
+                if (adVideo) {
+                    adVideo.pause();
+                    adVideo.src = "";
+                    adVideo.load();
+                }
+                adLayer.style.display = "none";
+                art.play();
+            };
+            document.getElementById('adVideo').onended = function() {
+                const adLayer = document.getElementById('adLayer');
+                this.pause();
+                this.src = "";
+                adLayer.style.display = "none";
+                art.play();
             }
 
-            function changeEp(index) {
-                if (index >= 0 && index < movie.episodes.length) {
-                    currentEp = index;
-                    art.switchUrl(movie.episodes[index].url);
-                    document.querySelectorAll('.ep-item').forEach((el, i) => {
-                        el.classList.toggle('active', i === index);
-                    });
+            // SERIES LOGIC
+            if (m.type === 'series') {
+                document.getElementById('epBox').style.display = 'block';
+                const box = document.getElementById('epItems');
+                m.episodes.forEach((ep, i) => {
+                    const d = document.createElement('div');
+                    d.className = `ep-item ${i===0?'active':''}`;
+                    d.innerText = ep.title;
+                    d.onclick = () => changeEp(i);
+                    box.appendChild(d);
+                });
+            }
+
+            function changeEp(i) {
+                if (i >= 0 && i < m.episodes.length) {
+                    cur = i;
+                    art.switchUrl(m.episodes[i].url);
+                    document.querySelectorAll('.ep-item').forEach((el, idx) => el.classList.toggle('active', idx === i));
                 }
             }
         }
