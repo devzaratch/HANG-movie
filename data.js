@@ -375,7 +375,7 @@ const movieDatabase = [
         title: "Elevation (2024) อสุรกายขย้ำ 8000 ฟุต",
         quality: "HD",
         category: "action",
-        poster: "https://m.media-amazon.com/images/M/MV5BMjA5OTY2MTctNDVkOC00YTM1LTlhMTctNDk5ZjE2YWEwY2ZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        poster: "https://cdn.majorcineplex.com/uploads/movie/4296/thumb_4296.jpg",
         url: "https://master.streamhls.com/hls/bc460f0a2e10f3b1da087026ed2cced2/master.m3u8"
     },
     {
