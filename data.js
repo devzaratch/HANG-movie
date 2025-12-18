@@ -413,5 +413,138 @@ const movieDatabase = [
             { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/a67967e67ca421c35dd71e134b1c3380/master.m3u8" },
             { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/d6919a1a46671e1ab24c13dd7daf6a22/master.m3u8" }
         ]
-    }
+    },
+    {
+        id: "m41",
+        type: "movie",
+        title: "Jurassic World Rebirth (2025) จูราสสิค เวิลด์ กำเนิดชีวิตใหม่",
+        quality: "HD",
+        category: "action",
+        poster: "https://lh3.googleusercontent.com/uyPGB4EyffcHy_TcPnh9n6srVo6pOOKiSZTETeZcjb4v3Z-wF_e0ADk8zcY3eYsNeZ-zF10DqJs3GNrLL2P8RdmhrRAgP7W6=s0",
+        url: "https://master.streamhls.com/hls/7d23649797b2c72397915d7881e42524/master.m3u8"
+    },
+    {
+        id: "m42",
+        type: "movie",
+        title: "Star Wars: The Rise of Skywalker (2019) สตาร์ วอร์ส: กำเนิดใหม่สกายวอล์คเกอร์",
+        quality: "HD",
+        category: "action",
+        poster: "https://f.ptcdn.info/657/065/000/pwrvo4cex1qi8y70hIF-o.jpg",
+        url: "https://master.streamhls.com/hls/4f06af980d77012e1de27cf2301cc4b6/master.m3u8"
+    },
+    {
+        id: "m43",
+        type: "movie",
+        title: "Holy Night Demon Hunters (2025) ฅนต่อยผี",
+        quality: "HD",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDZhYjUwMTUtNTcyZS00MWNkLWI3NGItMDZlZGNmMjQxYTQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        url: "https://master.streamhls.com/hls/fd3c45d647cfc4a55ce96f943cc72775/master.m3u8"
+    },
+    {
+        id: "m44",
+        type: "movie",
+        title: "Kung Fu Panda 4 (2024) กังฟูแพนด้า 4",
+        quality: "HD",
+        category: "anime",
+        poster: "https://image.tmdb.org/t/p/original/iSqi0vag3gtqFVJdWutIEj6IYNg.jpg",
+        url: "https://master.streamhls.com/hls/7962ea7c4c693d3d06f3031f911d51c2/master.m3u8"
+    },
+    {
+        id: "m45",
+        type: "movie",
+        title: "Top Gun: Maverick (2022) ท็อปกัน มาเวอริค",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/0/03/%E0%B9%83%E0%B8%9A%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B9%8C_%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%99_%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%84.jpg",
+        url: "https://master.streamhls.com/hls/fcde2096c914fcbb1290da00fac065ad/master.m3u8"
+    },
+    {
+        id: "s4",
+        type: "series",
+        title: "Stranger Things (2016) สเตรนเจอร์ ธิงส์",
+        quality: "HD",
+        category: "serie",
+        poster: "https://f.ptcdn.info/759/054/000/ozpywdsopIWpXH339Jn-o.jpg",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://master.steamhls88.com/hlsr2/254888e387c65dc7813a8932d3369a0f/master.m3u8" },
+            { title: "ตอนที่ 2", url: "https://master.steamhls88.com/hlsr2/0dcebf7082f44b9c19c78b905f67d885/master.m3u8" },
+            { title: "ตอนที่ 3", url: "https://master.steamhls88.com/hlsr2/a55023954fa605bf8bba5971922aa963/master.m3u8" },
+            { title: "ตอนที่ 4", url: "https://master.steamhls88.com/hlsr2/6ae1fb63296240c5951e03f6b7d20867/master.m3u8" },
+            { title: "ตอนที่ 5", url: "https://master.steamhls88.com/hlsr2/17626a2a4917f09f1336cfcc54846a78/master.m3u8" },
+            { title: "ตอนที่ 6", url: "https://master.steamhls88.com/hlsr2/56f76497785b6a61507567dfae776eaa/master.m3u8" },
+            { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/171f6731ba245e613d6dd561127517b8/master.m3u8" },
+            { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/54a85f72e711177c7ccd44884d96355e/master.m3u8" }
+        ]
+    },
+    {
+        id: "s5",
+        type: "series",
+        title: "Stranger Things 2 (2017) สเตรนเจอร์ ธิงส์ 2",
+        quality: "HD",
+        category: "serie",
+        poster: "https://media.themoviedb.org/t/p/w500/74nFJmiapxKuUBXRbSu6VqGGcuo.jpg",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://master.steamhls88.com/hlsr2/688500cd09c24859d0ce2f80be4a48c9/master.m3u8" },
+            { title: "ตอนที่ 2", url: "https://master.steamhls88.com/hlsr2/50df805ef85abc85aa140d47ef16513d/master.m3u8" },
+            { title: "ตอนที่ 3", url: "https://master.steamhls88.com/hlsr2/2c6a96814279802f65acb4e26cc3a3b0/master.m3u8" },
+            { title: "ตอนที่ 4", url: "https://master.steamhls88.com/hlsr2/399e8d12e08df2801bdef0b52f6d7a80/master.m3u8" },
+            { title: "ตอนที่ 5", url: "https://master.steamhls88.com/hlsr2/6d51b997405e5710c1bcf10dc4d6908c/master.m3u8" },
+            { title: "ตอนที่ 6", url: "https://master.steamhls88.com/hlsr2/8cbdcacece3198742c66c7bab0bcfbd5/master.m3u8" },
+            { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/ea66fc4bc755f278f46e53ea7300147b/master.m3u8" },
+            { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/43c3027dd04132a52946b0fbf4759f30/master.m3u8" },
+            { title: "ตอนที่ 9", url: "https://master.steamhls88.com/hlsr2/5078d1262e6ebf75c6e3cb45043529f7/master.m3u8" }
+        ]
+    },
+    {
+        id: "s6",
+        type: "series",
+        title: "Stranger Things 3 (2019) สเตรนเจอร์ ธิงส์ 3",
+        quality: "HD",
+        category: "serie",
+        poster: "https://f.ptcdn.info/861/064/000/pu7srinkqxM1nqy45R7-o.jpg",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://master.steamhls88.com/hlsr2/b28854ab8a3c186bc7be0bc11514ec38/master.m3u8" },
+            { title: "ตอนที่ 2", url: "https://master.steamhls88.com/hlsr2/e83de16233038d8a5b770fa54cb22709/master.m3u8" },
+            { title: "ตอนที่ 3", url: "https://master.steamhls88.com/hlsr2/2d8cb84fdf08ab79932915949cc225b6/master.m3u8" },
+            { title: "ตอนที่ 4", url: "https://master.steamhls88.com/hlsr2/857b72213d6fc8ad700d1665b0f186b2/master.m3u8" },
+            { title: "ตอนที่ 5", url: "https://master.steamhls88.com/hlsr2/39e69c5f676247780d2457a71adb0d14/master.m3u8" },
+            { title: "ตอนที่ 6", url: "https://master.steamhls88.com/hlsr2/1289b42f3e4164da0201f01d07f2b4e6/master.m3u8" },
+            { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/ae9e5030d286abedbff2d9a1732a88cd/master.m3u8" },
+            { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/49fc9e3f35a344167c9cc5432b6e5b96/master.m3u8" }
+        ]
+    },
+    {
+        id: "s7",
+        type: "series",
+        title: "Stranger Things 4 (2022) สเตรนเจอร์ ธิงส์ 4",
+        quality: "HD",
+        category: "serie",
+        poster: "https://image.tmdb.org/t/p/original/npUcqNNaZlLyIyFcymlLXPEZr57.jpg",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://master.steamhls88.com/hlsr2/5b6d72ec561f6db12feb3a87ce727107/master.m3u8" },
+            { title: "ตอนที่ 2", url: "https://master.steamhls88.com/hlsr2/f7a05b7e666e61ad0754810b86b7adc6/master.m3u8" },
+            { title: "ตอนที่ 3", url: "https://master.steamhls88.com/hlsr2/ac6201336cd3bb84be9d79fa23e73c5f/master.m3u8" },
+            { title: "ตอนที่ 4", url: "https://master.steamhls88.com/hlsr2/d3b18453dc3250323b95e59a2f2f436e/master.m3u8" },
+            { title: "ตอนที่ 5", url: "https://master.steamhls88.com/hlsr2/e969718c693ec4f7f13226c81be37c6f/master.m3u8" },
+            { title: "ตอนที่ 6", url: "https://master.steamhls88.com/hlsr2/bd7f0ce3bf6e53cd31de2835ffd09b0c/master.m3u8" },
+            { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/af110471ed3839a9b6da06e05f54a6ab/master.m3u8" },
+            { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/a0a2c13ab913bbf62fd63750dd78abb3/master.m3u8" },
+            { title: "ตอนที่ 9", url: "https://master.steamhls88.com/hlsr2/eb749d0d67a2b2ec10beca66740093de/master.m3u8" }
+        ]
+    },
+    {
+        id: "s8",
+        type: "series",
+        title: "Stranger Things 5 (2025) สเตรนเจอร์ ธิงส์ 5",
+        quality: "HD",
+        category: "serie",
+        poster: "https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQeHSBosv8l2X9RZuaT3ygZYs0XLLqa8vrpyBf1dTH8cjYR6sQsL26uyTNujyLkzvZKz3OyFvkd0u6PS-ZGcpyuRHnDLuYXucxhVMJxQXmZLlz88mnJ_jX5UymYsghaBfcEGD2RbIifQR7j4N5gGkvBDQ.jpg?r=473",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://master.steamhls88.com/hlsr2/17e74e65ed237a6913d74d8048396ed7/master.m3u8" },
+            { title: "ตอนที่ 2", url: "https://master.steamhls88.com/hlsr2/aa936ac03e97878cfa7a8090ab7a8e01/master.m3u8" },
+            { title: "ตอนที่ 3", url: "https://master.steamhls88.com/hlsr2/55affc0210155bc576b3b02ce0efb49c/master.m3u8" },
+            { title: "ตอนที่ 4", url: "https://master.steamhls88.com/hlsr2/a0d3d354016072cb9567261e27d320d7/master.m3u8" }
+        ]
+    },
 ];
