@@ -5,45 +5,102 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Watching | UFA-MOVIE</title>
+    
+    <title id="page-title">Watching | UFA-MOVIE</title>
+    <meta name="description" id="meta-description" content="ดูหนังออนไลน์ฟรี ดูซีรีส์ใหม่ล่าสุด 2025 พากย์ไทย เต็มเรื่อง ความคมชัดระดับ 4K/HD ที่ UFA-MOVIE">
+    <meta name="keywords" content="ดูหนังออนไลน์, ดูซีรีส์ฟรี, หนังใหม่ 2025, UFA-MOVIE, ดูหนัง4K">
+    
+    <meta property="og:type" content="video.movie">
+    <meta property="og:title" id="og-title" content="UFA-MOVIE">
+    <meta property="og:description" id="og-desc" content="ดูหนังออนไลน์ฟรี พากย์ไทย 4K">
+    <meta property="og:image" id="og-image" content="favicon.png">
+
+    <script id="structured-data" type="application/ld+json"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
-        .nav-back { padding: 15px; background: #111; }
+        body { background: #000; color: #fff; font-family: 'Prompt', sans-serif; margin: 0; }
+        .nav-back { padding: 15px; background: #111; position: sticky; top: 0; z-index: 1000; }
         .player-container { max-width: 1000px; margin: 20px auto; padding: 0 15px; position: relative; }
         
-        /* AD OVERLAY */
-        .ad-layer { position: absolute; top: 0; left: 15px; right: 15px; bottom: 0; background: rgba(0,0,0,0.95); z-index: 100; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
-        .btn-skip { position: absolute; bottom: 50px; right: 30px; background: #333; color: #fff; border: 1px solid #777; padding: 12px 25px; border-radius: 5px; cursor: not-allowed; }
-        .btn-skip.ready { background: #e50914; cursor: pointer; border-color: #fff; }
-        .btn-reg { position: absolute; top: 30px; right: 30px; background: #f5c518; color: #000; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        /* AD OVERLAY SYSTEM */
+        .ad-layer { 
+            position: absolute; top: 0; left: 15px; right: 15px; bottom: 0; 
+            background: #000; z-index: 100; display: flex; align-items: center; 
+            justify-content: center; border-radius: 10px; overflow: hidden;
+        }
+        #adVideo { width: 100%; height: 100%; object-fit: contain; background: #000; }
 
-        .artplayer-app { width: 100%; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; }
-        .ep-list { margin-top: 20px; background: #1a1c22; border-radius: 8px; }
-        .ep-item { padding: 15px; border-bottom: 1px solid #333; cursor: pointer; }
-        .ep-item.active { background: #222; border-left: 4px solid red; color: red; }
+        .btn-skip { 
+            position: absolute; bottom: 50px; right: 30px; background: rgba(0,0,0,0.8); 
+            color: #fff; border: 1px solid #777; padding: 12px 25px; border-radius: 5px; 
+            cursor: not-allowed; font-size: 16px; z-index: 101; transition: 0.3s;
+        }
+        .btn-skip.ready { background: #e50914; cursor: pointer; border-color: #fff; box-shadow: 0 0 10px rgba(229, 9, 20, 0.5); }
+        
+        .btn-reg { 
+            position: absolute; top: 30px; right: 30px; background: #f5c518; 
+            color: #000; padding: 10px 25px; text-decoration: none; font-weight: bold; 
+            border-radius: 5px; z-index: 101; box-shadow: 0 0 15px rgba(245, 197, 24, 0.5);
+        }
+
+        .ad-count-tag {
+            position: absolute; top: 30px; left: 30px; background: rgba(0,0,0,0.6);
+            padding: 5px 15px; border-radius: 20px; font-size: 13px; border: 1px solid #444;
+        }
+
+        /* MAIN PLAYER */
+        .artplayer-app { width: 100%; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #111; }
+        
+        /* INFO SECTION */
+        .movie-info-box { margin-top: 20px; padding: 10px; }
+        h1 { font-size: 24px; color: #fff; margin-bottom: 10px; }
+        .m-meta { color: #aaa; font-size: 14px; margin-bottom: 20px; }
+        .m-meta span { margin-right: 15px; background: #222; padding: 3px 8px; border-radius: 4px; }
+
+        /* EPISODE LIST */
+        .ep-list { margin-top: 20px; background: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+        .ep-header { padding: 15px; background: #1a1a1a; font-weight: bold; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 10px; }
+        .ep-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; padding: 15px; }
+        .ep-item { 
+            padding: 12px; background: #222; text-align: center; border-radius: 5px; 
+            cursor: pointer; transition: 0.2s; border: 1px solid transparent; font-size: 14px;
+        }
+        .ep-item:hover { background: #333; border-color: #555; }
+        .ep-item.active { background: #e50914; color: #fff; font-weight: bold; border-color: #fff; }
     </style>
 </head>
 <body>
-    <div class="nav-back"><a href="index.html" style="color:red; text-decoration:none;">← กลับหน้าแรก</a></div>
+    <header class="nav-back">
+        <a href="index.html" style="color:#fff; text-decoration:none; font-weight: bold;">
+            <i class="fas fa-chevron-left" style="color: red;"></i> กลับหน้าแรก
+        </a>
+    </header>
     
-    <div class="player-container">
-        <div id="adLayer" class="ad-layer">
-            <video id="adVideo" autoplay>
+    <main class="player-container">
+        <section id="adLayer" class="ad-layer">
+            <div class="ad-count-tag" id="adInfo">โฆษณา 1/2</div>
+            <video id="adVideo" autoplay muted playsinline>
                 <source src="UFA.mp4" type="video/mp4">
             </video>
-            <a href="https://ufasboclubauto.com/register" class="btn-reg">สมัครสมาชิก</a>
+            <a href="https://ufasboclubauto.com/register" id="regBtn" target="_blank" class="btn-reg">สมัครสมาชิก</a>
             <button id="skipBtn" class="btn-skip" disabled>รอ <span id="timer">3</span> วิ</button>
-        </div>
+        </section>
 
-        <div class="artplayer-app"></div>
-        <h1 id="m-title" style="margin:20px 0 10px;"></h1>
-        
-        <div class="ep-list" id="epBox" style="display:none;">
-            <div style="padding:15px; background:#333; font-weight:bold;">เลือกตอนรับชม</div>
-            <div id="epItems"></div>
-        </div>
-    </div>
+        <article id="video-content">
+            <div class="artplayer-app"></div>
+            <div class="movie-info-box">
+                <h1 id="m-title"></h1>
+                <div class="m-meta" id="m-meta">
+                    </div>
+            </div>
+            
+            <div class="ep-list" id="epBox" style="display:none;">
+                <div class="ep-header"><i class="fas fa-list"></i> เลือกตอนรับชม</div>
+                <div id="epItems" class="ep-items-grid"></div>
+            </div>
+        </article>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
@@ -51,24 +108,48 @@
     <script>
         const id = new URLSearchParams(window.location.search).get('id');
         const m = movieDatabase.find(x => x.id === id);
-        let cur = 0;
+        let currentAdIndex = 0;
+        let adInterval;
+        const adList = ["UFA.mp4", "laospro.mp4"]; 
+        const adLinks = [
+            "https://ufasboclubauto.com/register",
+            "https://laosproauto.com/la"
+        ];
 
         if (m) {
+            // --- 1. อัปเดต SEO & AI Overview Metadata ---
+            const fullTitle = `ดูหนัง ${m.title} เต็มเรื่อง พากย์ไทย 4K | UFA-MOVIE`;
+            const fullDesc = `รับชม ${m.title} ความคมชัด ${m.quality} หมวดหมู่ ${m.category} ดูหนังออนไลน์ฟรี 24 ชม. ที่ UFA-MOVIE`;
+            
+            document.getElementById('page-title').innerText = fullTitle;
             document.getElementById('m-title').innerText = m.title;
-            const startUrl = m.type === 'series' ? m.episodes[0].url : m.url;
+            document.getElementById('meta-description').setAttribute("content", fullDesc);
+            document.getElementById('m-meta').innerHTML = `<span><i class="fas fa-video"></i> ${m.quality}</span> <span><i class="fas fa-tag"></i> ${m.category}</span>`;
+            
+            // Structured Data สำหรับ AI
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": m.type === 'series' ? "TVSeries" : "Movie",
+                "name": m.title,
+                "image": m.poster,
+                "description": fullDesc,
+                "potentialAction": {
+                    "@type": "WatchAction",
+                    "target": window.location.href
+                }
+            };
+            document.getElementById('structured-data').textContent = JSON.stringify(schema);
 
+            // --- 2. ตั้งค่าเครื่องเล่นหลัก ---
+            const startUrl = m.type === 'series' ? m.episodes[0].url : m.url;
             const art = new Artplayer({
                 container: '.artplayer-app',
                 url: startUrl,
                 type: 'm3u8',
-                pip: true,
                 setting: true,
+                pip: true,
                 fullscreen: true,
-                controls: m.type === 'series' ? [{
-                    position: 'right',
-                    html: '<i class="fas fa-step-forward"></i>',
-                    click: () => changeEp(cur + 1)
-                }] : [],
+                fullscreenWeb: true,
                 customType: {
                     m3u8: (video, url) => {
                         const hls = new Hls();
@@ -78,39 +159,55 @@
                 }
             });
 
-            // AD TIMER LOGIC
-            let count = 3;
-            const t = setInterval(() => {
-                count--;
-                if(count > 0) document.getElementById('timer').innerText = count;
-                else {
-                    clearInterval(t);
-                    const b = document.getElementById('skipBtn');
-                    b.innerText = "ข้ามโฆษณา"; b.disabled = false; b.classList.add('ready');
-                }
-            }, 1000);
+            // --- 3. ระบบจัดการโฆษณา ---
+            const adVideo = document.getElementById('adVideo');
+            const skipBtn = document.getElementById('skipBtn');
+            const adLayer = document.getElementById('adLayer');
+            const adInfo = document.getElementById('adInfo');
+            const regBtn = document.getElementById('regBtn');
 
-            document.getElementById('skipBtn').onclick = function() {
-                const adVideo = document.getElementById('adVideo');
-                const adLayer = document.getElementById('adLayer');
+            function startTimer() {
+                let timeLeft = 3; 
+                skipBtn.disabled = true;
+                skipBtn.classList.remove('ready');
+                skipBtn.innerHTML = `รอ <span id="timer">${timeLeft}</span> วิ`;
 
-                if (adVideo) {
-                    adVideo.pause();
-                    adVideo.src = "";
-                    adVideo.load();
-                }
-                adLayer.style.display = "none";
-                art.play();
-            };
-            document.getElementById('adVideo').onended = function() {
-                const adLayer = document.getElementById('adLayer');
-                this.pause();
-                this.src = "";
-                adLayer.style.display = "none";
-                art.play();
+                if(adInterval) clearInterval(adInterval);
+                adInterval = setInterval(() => {
+                    timeLeft--;
+                    if(timeLeft > 0) {
+                        const timerSpan = document.getElementById('timer');
+                        if(timerSpan) timerSpan.innerText = timeLeft;
+                    } else {
+                        clearInterval(adInterval);
+                        skipBtn.innerText = currentAdIndex < adList.length - 1 ? "ข้ามไปคลิปถัดไป" : "ข้ามโฆษณาเพื่อดูหนัง";
+                        skipBtn.disabled = false;
+                        skipBtn.classList.add('ready');
+                    }
+                }, 1000);
             }
 
-            // SERIES LOGIC
+            function nextAd() {
+                currentAdIndex++;
+                if(currentAdIndex < adList.length) {
+                    adInfo.innerText = `โฆษณา ${currentAdIndex + 1}/${adList.length}`;
+                    regBtn.href = adLinks[currentAdIndex];
+                    adVideo.src = adList[currentAdIndex];
+                    adVideo.load();
+                    adVideo.play().catch(e => console.log("Autoplay blocked, waiting for interaction"));
+                    startTimer();
+                } else {
+                    adVideo.pause();
+                    adLayer.style.display = 'none';
+                    art.play(); 
+                }
+            }
+
+            adVideo.onended = nextAd;
+            skipBtn.onclick = nextAd;
+            startTimer();
+
+            // --- 4. ระบบซีรีส์ ---
             if (m.type === 'series') {
                 document.getElementById('epBox').style.display = 'block';
                 const box = document.getElementById('epItems');
@@ -118,17 +215,13 @@
                     const d = document.createElement('div');
                     d.className = `ep-item ${i===0?'active':''}`;
                     d.innerText = ep.title;
-                    d.onclick = () => changeEp(i);
+                    d.onclick = () => {
+                        art.switchUrl(ep.url);
+                        document.querySelectorAll('.ep-item').forEach((el, idx) => el.classList.toggle('active', idx === i));
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    };
                     box.appendChild(d);
                 });
-            }
-
-            function changeEp(i) {
-                if (i >= 0 && i < m.episodes.length) {
-                    cur = i;
-                    art.switchUrl(m.episodes[i].url);
-                    document.querySelectorAll('.ep-item').forEach((el, idx) => el.classList.toggle('active', idx === i));
-                }
             }
         }
     </script>
