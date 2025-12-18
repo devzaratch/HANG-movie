@@ -122,7 +122,7 @@ const movieDatabase = [
         type: "movie",
         title: "Avatar (2009) อวตาร 4K",
         quality: "HD",
-        category: "acttion",
+        category: "action",
         poster: "https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/9cAAAOSwy8xir7bm/$_57.JPG?set_id=880000500F",
         url: "https://master.streamhls.com/hls/8412420e8eb07e9dbe8479045d03243a/master.m3u8"
     },
@@ -131,7 +131,7 @@ const movieDatabase = [
         type: "movie",
         title: "Avatar 2: The Way of Water (2022) อวตาร: วิถีแห่งสายน้ำ",
         quality: "HD",
-        category: "acttion",
+        category: "action",
         poster: "https://m.media-amazon.com/images/I/71Lvqoov42L.jpg",
         url: "https://master.streamhls.com/hls/066b49de468e78b54f7ba04d5776f733/master.m3u8"
     },
@@ -210,7 +210,7 @@ const movieDatabase = [
     {
         id: "m20",
         type: "movie",
-        title: "omahawk Action 2 Bloodthirsty (2023) ปฏิบัติการโทมาฮอว์ก 2 นองเลือด",
+        title: "Tomahawk Action 2 Bloodthirsty (2023) ปฏิบัติการโทมาฮอว์ก 2 นองเลือด",
         quality: "HD",
         category: "action",
         poster: "https://pic3.iqiyipic.com/image/20230726/e2/ed/v_173206106_m_601_en_260_360.webp",
@@ -375,7 +375,7 @@ const movieDatabase = [
         title: "Elevation (2024) อสุรกายขย้ำ 8000 ฟุต",
         quality: "HD",
         category: "action",
-        poster: "https://lh3.googleusercontent.com/VeccC2fNWFRz6BKbXiPvFpKiTp6izOSdbErfEp10srYmBEtiKYDFfqDfCcOyaCHeh_VOm1eHECnBAdDXRigzztk2rErVWZmBQg=w280",
+        poster: "https://m.media-amazon.com/images/M/MV5BMjA5OTY2MTctNDVkOC00YTM1LTlhMTctNDk5ZjE2YWEwY2ZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         url: "https://master.streamhls.com/hls/bc460f0a2e10f3b1da087026ed2cced2/master.m3u8"
     },
     {
@@ -413,5 +413,5 @@ const movieDatabase = [
             { title: "ตอนที่ 7", url: "https://master.steamhls88.com/hlsr2/a67967e67ca421c35dd71e134b1c3380/master.m3u8" },
             { title: "ตอนที่ 8", url: "https://master.steamhls88.com/hlsr2/d6919a1a46671e1ab24c13dd7daf6a22/master.m3u8" }
         ]
-    },
+    }
 ];
