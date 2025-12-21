@@ -73,18 +73,18 @@
 <body>
     <header class="nav-back">
         <a href="index.html" style="color:#fff; text-decoration:none; font-weight: bold;">
-            <i class="fas fa-chevron-left" style="color: red;"></i> กลับหน้าแรก
+            <i class="fas fa-chevron-left" style="color: red;"></i> ກັບໜ້າຫລັກ
         </a>
     </header>
     
     <main class="player-container">
         <section id="adLayer" class="ad-layer">
-            <div class="ad-count-tag" id="adInfo">โฆษณา 1/2</div>
+            <div class="ad-count-tag" id="adInfo">ໂຄສະນາ 1/2</div>
             <video id="adVideo" autoplay muted playsinline>
                 <source src="UFA.mp4" type="video/mp4">
             </video>
-            <a href="https://ufasboclubauto.com/register" id="regBtn" target="_blank" class="btn-reg">สมัครสมาชิก</a>
-            <button id="skipBtn" class="btn-skip" disabled>รอ <span id="timer">3</span> วิ</button>
+            <a href="https://ufasboclubauto.com/register" id="regBtn" target="_blank" class="btn-reg">ສະໝັກສະມາຊິກ</a>
+            <button id="skipBtn" class="btn-skip" disabled>ລໍຖ້າ <span id="timer">3</span> ວິ</button>
         </section>
 
         <article id="video-content">
@@ -96,7 +96,7 @@
             </div>
             
             <div class="ep-list" id="epBox" style="display:none;">
-                <div class="ep-header"><i class="fas fa-list"></i> เลือกตอนรับชม</div>
+                <div class="ep-header"><i class="fas fa-list"></i> ເລືອກຕອນເບິ່ງ</div>
                 <div id="epItems" class="ep-items-grid"></div>
             </div>
         </article>
@@ -118,8 +118,8 @@
 
         if (m) {
             // --- 1. อัปเดต SEO & AI Overview Metadata ---
-            const fullTitle = `ดูหนัง ${m.title} เต็มเรื่อง พากย์ไทย 4K | UFA-MOVIE`;
-            const fullDesc = `รับชม ${m.title} ความคมชัด ${m.quality} หมวดหมู่ ${m.category} ดูหนังออนไลน์ฟรี 24 ชม. ที่ UFA-MOVIE`;
+            const fullTitle = `ເບິ່ງໜັງ ${m.title} ເຕັມເລື່ອງ ພາກໄທ 4K | UFA-MOVIE`;
+            const fullDesc = `ເບິ່ງ ${m.title} ຄວາມຄົມຊັດ ${m.quality} ໝວດໝູ່ ${m.category} ເບິ່ງໜັງອອນໄລນ໌ 24 ชม. ที่ UFA-MOVIE`;
             
             document.getElementById('page-title').innerText = fullTitle;
             document.getElementById('m-title').innerText = m.title;
@@ -170,7 +170,7 @@
                 let timeLeft = 3; 
                 skipBtn.disabled = true;
                 skipBtn.classList.remove('ready');
-                skipBtn.innerHTML = `รอ <span id="timer">${timeLeft}</span> วิ`;
+                skipBtn.innerHTML = `ລໍຖ້າ <span id="timer">${timeLeft}</span> ວິ`;
 
                 if(adInterval) clearInterval(adInterval);
                 adInterval = setInterval(() => {
@@ -180,7 +180,7 @@
                         if(timerSpan) timerSpan.innerText = timeLeft;
                     } else {
                         clearInterval(adInterval);
-                        skipBtn.innerText = currentAdIndex < adList.length - 1 ? "ข้ามไปคลิปถัดไป" : "ข้ามโฆษณาเพื่อดูหนัง";
+                        skipBtn.innerText = currentAdIndex < adList.length - 1 ? "ຂ້າມໄປຄິບຖັດ" : "ຂ້າມໂຄສະນາເພື່ອເບິ່ງໜັງ";
                         skipBtn.disabled = false;
                         skipBtn.classList.add('ready');
                     }
@@ -190,7 +190,7 @@
             function nextAd() {
                 currentAdIndex++;
                 if(currentAdIndex < adList.length) {
-                    adInfo.innerText = `โฆษณา ${currentAdIndex + 1}/${adList.length}`;
+                    adInfo.innerText = `ໂຄສະນາ ${currentAdIndex + 1}/${adList.length}`;
                     regBtn.href = adLinks[currentAdIndex];
                     adVideo.src = adList[currentAdIndex];
                     adVideo.load();
