@@ -610,4 +610,58 @@ const movieDatabase = [
         poster: "https://cdn.majorcineplex.com/uploads/movie/3518/thumb_3518.jpg",
         url: "https://master.steamhls88.com/hlsr2/93707159920ef181f1269bd05f23469a/master.m3u8"
     },
+    {
+        id: "m47",
+        type: "movie",
+        title: "Shang-Chi and the Legend of the Ten Rings (2021) ชาง-ชี กับตำนานลับเท็นริงส์",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2021-09/images-poster/210923120021304.jpg",
+        url: "https://master.streamhls.com/hls/af440910a95ea7585832b7c7390a53bc/master.m3u8"
+    },
+    {
+        id: "m48",
+        type: "movie",
+        title: "Doraemon the Movie Nobita’s Earth Symphony (2024) โดราเอมอน เดอะ มูฟวี่ ตอน โลกแห่งซิมโฟนี่ของโนบิตะ",
+        quality: "HD",
+        category: "anime",
+        poster: "https://files.thaiware.site/movie/2024-09/images-poster/2409161204125DS.jpg",
+        url: "https://master.streamhls.com/hls/a2fc04bd41275711ddc9180ac1cafb99/master.m3u8"
+    },
+    {
+        id: "m49",
+        type: "movie",
+        title: "Moana 2 (2024) โมอาน่า 2",
+        quality: "HD",
+        category: "anime",
+        poster: "https://lumiere-a.akamaihd.net/v1/images/mo2_payoff_clam_1s_s_8a7c0acc.jpeg",
+        url: "https://master.streamhls.com/hls/b5d1a66d2393a15c2730b90cfd7e973e/master.m3u8"
+    },
+    {
+        id: "m50",
+        type: "movie",
+        title: "คนเดือด​ ซัดนรก Striking Rescue (2024)",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2024-11/images-poster/241112120447l6X.jpg",
+        url: "https://master.streamhls.com/hls/d81fa54fa38daa9fa5e089fc2266f333/master.m3u8"
+    },
+    {
+        id: "m51",
+        type: "movie",
+        title: "Weekend in Taipei (2025) เร็ว..แรง ทะลุไทเป",
+        quality: "HD",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BY2JiNDJiN2EtNGRlNC00ODE2LTgwNmQtOGFiZTk0NjZlMmFhXkEyXkFqcGc@._V1_.jpg",
+        url: "https://master.streamhls.com/hls/80e1a5ebcff9d7d4fd6fa06e049446d1/master.m3u8"
+    },
+    {
+        id: "m52",
+        type: "movie",
+        title: "Escape (2024) หนีให้พ้นนรก",
+        quality: "HD",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BYzFjNjYyYTMtOTI4MS00YjE1LTllZDYtZjk0NzI5ZjUxZjYxXkEyXkFqcGc@._V1_.jpg",
+        url: "https://master.streamhls.com/hls/7fc2f22831aadad32a3ec8b56ebb608f/master.m3u8"
+    },
 ];
