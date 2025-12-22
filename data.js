@@ -781,4 +781,157 @@ const movieDatabase = [
         poster: "https://cms.dmpcdn.com/ugcarticle/2025/03/31/be931060-0e10-11f0-8e8e-cbbb713c3b59_webp_original.webp",
         url: "https://master.streamhls.com/hls/96311a3b777ce46aff24ce1ff3a1d3ad/master.m3u8"
     },
+    {
+        id: "m66",
+        type: "movie",
+        title: "The Boy and the Heron (2023) เด็กชายกับนกกระสา",
+        quality: "HD",
+        category: "anime",
+        poster: "https://f.ptcdn.info/927/082/000/s78nq11hsbjMvG3H3GgLc-o.jpg",
+        url: "https://master.streamhls.com/hls/5a2df8496bb2d9fe6b246e6ff13a6899/master.m3u8"
+    },
+    {
+        id: "m66",
+        type: "movie",
+        title: "Despicable Me 4 (2024) มิสเตอร์แสบ ร้ายเกินพิกัด 4",
+        quality: "HD",
+        category: "anime",
+        poster: "https://d2dogsd00e27qz.cloudfront.net/eyJidWNrZXQiOiJzdXBlcmFwcC1wcm9kLWltYWdlIiwia2V5IjoiYnVnYWJvby1tb3ZpZS1jb250ZW50L25ld3MvMjAyNS8wMi8yMi8xNzQwMTk3NjgwNTM3LWRtNF9pbnRsX2plcnJ5X21vdXRoX3ByaW50XzFfc2hlZXRzX292XzE3MjAwOTAxODNfNDY2Ny5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY0OCwiaGVpZ2h0Ijo5NjAsImZpdCI6Imluc2lkZSJ9fX0=",
+        url: "https://master.streamhls.com/hls/aaf053b692e4c25d138ae169a30fa1ef/master.m3u8"
+    },
+    {
+        id: "m67",
+        type: "movie",
+        title: "Trolls Band Together (2023) โทรลล์ส 3",
+        quality: "HD",
+        category: "anime",
+        poster: "https://files.thaiware.site/movie/2023-03/images-poster/230331120423G80.jpg",
+        url: "https://master.streamhls.com/hls/177c7c1718c8bd39a3a17781ffa9d084/master.m3u8"
+    },
+    {
+        id: "m68",
+        type: "movie",
+        title: "Insidious The Red Door (2023) วิญญาณตามติด ประตูผีผ่าน",
+        quality: "HD",
+        category: "horror",
+        poster: "https://cdn.majorcineplex.com/uploads/movie/3549/thumb_3549.jpg?140220250435",
+        url: "https://master.streamhls.com/hls/52c237c3749e73b416c8536fdfe8ef31/master.m3u8"
+    },
+    {
+        id: "m69",
+        type: "movie",
+        title: "Bad Boys Ride or Die (2024) คู่หูขวางนรก ลุยต่อให้โลกจำ",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2024-05/images-poster/240516120416qzW.jpg",
+        url: "https://master.streamhls.com/hls/6afa8135cc4fab11edd514c1bffece29/master.m3u8"
+    },
+    {
+        id: "m70",
+        type: "movie",
+        title: "Inside Out 2 (2024) มหัศจรรย์อารมณ์อลเวง 2",
+        quality: "HD",
+        category: "anime",
+        poster: "https://lumiere-a.akamaihd.net/v1/images/io2_payoff_squish_poster-s_29270ace.jpeg?region=0%2C0%2C1440%2C2160",
+        url: "https://master.streamhls.com/hls/f627481a10dd9811f3b4f8b5f18c2f06/master.m3u8"
+    },
+    {
+        id: "m71",
+        type: "movie",
+        title: "Sonic the Hedgehog (2020) โซนิค เดอะ เฮดจ์ฮ็อก",
+        quality: "HD",
+        category: "anime",
+        poster: "https://img.monomax.me/bT2SYl-wQyVcT1v-FO0V4gkiGrs=/monomax-obj.obs.ap-southeast-2.myhuaweicloud.com/assets/products/103942_pAKGGVgurH8Q3LA6GByg.jpg",
+        url: "https://master.streamhls.com/hls/fad387a5a25b7bb63fe3fad5af0bda05/master.m3u8"
+    },
+    {
+        id: "m72",
+        type: "movie",
+        title: "The Addams Family (2019) ตระกูลนี้ผียังหลบ",
+        quality: "HD",
+        category: "anime",
+        poster: "https://cdni-hw.ch7.com/dm/sz-md/i/images/2024/07/01/6682397d23bec7.71108033.jpg",
+        url: "https://master.streamhls.com/hls/1f8766f754aa153d3a43a48e47c488bd/master.m3u8"
+    },
+    {
+        id: "m73",
+        type: "movie",
+        title: "The Garfield Movie (2024) เดอะ การ์ฟิลด์ มูฟวี่",
+        quality: "HD",
+        category: "anime",
+        poster: "https://i.pinimg.com/736x/26/08/3b/26083be4d75955ba8a4dece3509d2ee5.jpg",
+        url: "https://master.streamhls.com/hls/b005c0b71468aca506e151fc3e3e61e3/master.m3u8"
+    },
+    {
+        id: "m74",
+        type: "movie",
+        title: "PAW Patrol The Mighty Movie (2023) ขบวนการเจ้าตูบสี่ขา เดอะ ไมตี้ มูฟวี",
+        quality: "HD",
+        category: "anime",
+        poster: "https://files.thaiware.site/movie/2023-09/images-poster/230922120408Jd9.jpg",
+        url: "https://master.streamhls.com/hls/e43a28609f8144f4c76e7ba51960647c/master.m3u8"
+    },
+    {
+        id: "m75",
+        type: "movie",
+        title: "Detective Conan vs Kid the Phantom Thief (2024) ยอดนักสืบจิ๋วโคนัน vs จอมโจรคิด",
+        quality: "HD",
+        category: "anime",
+        poster: "https://lh3.googleusercontent.com/IoErbupsoVF_5wFkY6xW3BN9sQBL8XQBOrbE01_sXLB1A5DoAJwm1Hyz6Ojy-OcCE8eARj_vRe9QooWfuxlMl958h0U61smUnSU=s0",
+        url: "https://master.streamhls.com/hls/404b7af1f986af3d010003955d37c397/master.m3u8"
+    },
+    {
+        id: "m76",
+        type: "movie",
+        title: "Space Jam: A New Legacy (2021) สเปซแจม ทะลุมิติมหัศจรรย์ 2 อะนิวเลกาซี่",
+        quality: "HD",
+        category: "anime",
+        poster: "https://lh3.googleusercontent.com/xBNTJNJpEczaFADxQvxyOyMrgOY89XwQBiVfbBqg2aiKTm3XEAeIpsEVvUFprQRSOjfSFw_XscDWA6DNR4VuwCvqz1mUdejGhlw=s0",
+        url: "https://master.streamhls.com/hls/158ed26f87d067b916bd1104eb6f8b3c/master.m3u8"
+    },
+    {
+        id: "m77",
+        type: "movie",
+        title: "John Wick: Chapter 4 (2023) จอห์น วิค แรงกว่านรก 4",
+        quality: "HD",
+        category: "action",
+        poster: "https://sahamongkolfilm.com/wp-content/uploads/2023/02/John-Wick-4-Character-Poster-Thai01-2.jpg",
+        url: "https://master.streamhls.com/hls/573b370155442e19785485783db3784d/master.m3u8"
+    },
+    {
+        id: "m78",
+        type: "movie",
+        title: "Civil War (2024) วิบัติสมรภูมิเมืองเดือด",
+        quality: "HD",
+        category: "action",
+        poster: "https://image.tmdb.org/t/p/original/cw8lVmbnmLSr2v4d4EdLw8K7JWF.jpg",
+        url: "https://master.streamhls.com/hls/91a290ab60b4e355d977d65f78ce50ce/master.m3u8"
+    },
+    {
+        id: "m79",
+        type: "movie",
+        title: "Hunt (2022) ล่าคน ปลอมคน",
+        quality: "HD",
+        category: "action",
+        poster: "https://sahamongkolfilm.com/wp-content/uploads/2022/08/Hunt-Kor-Poster-Thai02.jpg",
+        url: "https://master.streamhls.com/hls/66ac358c0596fd565f4a29f3e409b244/master.m3u8"
+    },
+    {
+        id: "m80",
+        type: "movie",
+        title: "Mission Impossible 7 Dead Reckoning Part One (2023) มิชชั่น อิมพอสซิเบิ้ล 7 ล่าพิกัดมรณะ",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/7/7a/%E0%B9%83%E0%B8%9A%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B9%8C_%E0%B8%A1%E0%B8%B4%E0%B8%8A%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99-%E0%B8%AD%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B8%AD%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%A5_%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%9E%E0%B8%B4%E0%B8%81%E0%B8%B1%E0%B8%94%E0%B8%A1%E0%B8%A3%E0%B8%93%E0%B8%B0_%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87.jpg",
+        url: "https://master.streamhls.com/hls/2e203c2d1f5397522e59732feb387293/master.m3u8"
+    },
+    {
+        id: "m81",
+        type: "movie",
+        title: "4 KINGS 2 (2023) 4 คิงส์ 2",
+        quality: "HD",
+        category: "action",
+        poster: "https://img.pptvhd36.com/thumbor/2023/11/29/news-1fcab11.jpg",
+        url: "https://master.streamhls.com/hls/632bbf982de1d7088152048c5f72755f/master.m3u8"
+    },
 ];
