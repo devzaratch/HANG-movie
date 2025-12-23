@@ -934,4 +934,13 @@ const movieDatabase = [
         poster: "https://img.pptvhd36.com/thumbor/2023/11/29/news-1fcab11.jpg",
         url: "https://master.streamhls.com/hls/632bbf982de1d7088152048c5f72755f/master.m3u8"
     },
+    {
+        id: "m82",
+        type: "movie",
+        title: "Demon Slayer Kimetsu no Yaiba To the Hashira Training (2024) ดาบพิฆาตอสูร เดอะมูฟวี่ ปาฏิหาริย์แห่งสายสัมพันธ์ สู่การสั่งสอนของเสาหลัก",
+        quality: "HD",
+        category: "anime",
+        poster: "https://kahirihome.com/wp-content/uploads/2025/10/Demon-Slayer-Kimetsu-no-Yaiba-To-the-Hashira-Training-2024-%E0%B8%9B%E0%B8%B2%E0%B8%8F%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B8%A2%E0%B9%8C%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B9%8C-%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-300x450-1.jpg",
+        url: "https://master.streamhls.com/hls/781711ce0316dfdfda8f54a2b1726c8b/master.m3u8"
+    },
 ];
