@@ -1132,4 +1132,48 @@ const movieDatabase = [
         poster: "https://i0.wp.com/www.patsonic.com/images/2020/07/train-to-busan-peninsula-thai-poster.jpg?ssl=1",
         url: "https://master.streamhls.com/hls/da609c852988f575a59aea5b36cba6b9/master.m3u8"
     },
+    {
+        id: "m104",
+        type: "movie",
+        title: "Midway (2019) อเมริกา ถล่ม ญี่ปุ่น",
+        quality: "HD",
+        category: "action",
+        poster: "https://sahamongkolfilm.com/wp-content/uploads/2019/10/Midway-Poster-Thai.jpg",
+        url: "https://master.streamhls.com/hls/217ab0b0d63f85f7d1608cd3f1e42e1a/master.m3u8"
+    },
+    {
+        id: "m105",
+        type: "movie",
+        title: "Monkey King fights Lion Camel (2025) ซุนหงอคง ราชาวานร",
+        quality: "HD",
+        category: "action",
+        poster: "https://a.ltrbxd.com/resized/film-poster/1/2/4/4/3/8/9/1244389-monkey-king-fight-lion-camel-0-230-0-345-crop.jpg?v=845a7a4253",
+        url: "https://master.streamhls.com/hls/a96c16a9be56995ee16bc26a749e92ea/master.m3u8"
+    },
+    {
+        id: "s11",
+        type: "series",
+        title: "Big Mouth พากย์ไทย (2022)",
+        quality: "HD",
+        category: "serie",
+        poster: "https://ptcdn.info/korea/2022/poster/8ulYf51Cmi-1658310106_o.jpg",
+        episodes: [
+            { title: "ตอนที่ 1", url: "https://online225.com/cdn/hls/6173e27f69d1a59a9c33c664b1e548d1/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 2", url: "https://online225.com/cdn/hls/962c6f39e7255afbac3d07e80dff1b57/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 3", url: "https://online225.com/cdn/hls/e118b5b6347dcbd3d5172bada56990e0/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 4", url: "https://online225.com/cdn/hls/cdba43a46c924bfdb078089135850a1a/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 5", url: "https://online225.com/cdn/hls/94230a9ad96f2e35a9ac2329e32585dc/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 6", url: "https://online225.com/cdn/hls/57ba452d3b9db5d37f0ef9246955efca/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 7", url: "https://online225.com/cdn/hls/925025ae34ec9f35d0825eac463c1c04/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 8", url: "https://online225.com/cdn/hls/5965c0f11e6150bc877b1376f26d444a/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 9", url: "https://online225.com/cdn/hls/98416d84e106d6c94cc63bee2a5303c6/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 10", url: "https://online225.com/cdn/hls/d29cc1fceb77a6f68ecf70f87dc914a7/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 11", url: "https://online225.com/cdn/hls/b9df3e14b708c93397377789c9c3481d/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 12", url: "https://online225.com/cdn/hls/675f8b40546f0466f866f9fc1acca302/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 13", url: "https://online225.com/cdn/hls/7efe8ec16f1bb3f0b5186d07135989ce/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 14", url: "https://online225.com/cdn/hls/93d22281d6d8fa999599d1ce25487d29/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 15", url: "https://online225.com/cdn/hls/9835011fd22076f81793d964d7b2fef0/master.txt?s=1&d=.m3u8" },
+            { title: "ตอนที่ 16", url: "https://online225.com/cdn/hls/9dffa1efc075be4a0b3b6776671ae028/master.txt?s=1&d=.m3u8" }
+        ]
+    },
 ];
