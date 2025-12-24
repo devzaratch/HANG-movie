@@ -1198,4 +1198,13 @@ const movieDatabase = [
             { title: "ตอนที่ 12", url: "https://top-cdn.com/hls/5eb74b98119656aa9a333628540bb487/master.m3u8" }
         ]
     },
+    {
+        id: "m106",
+        type: "movie",
+        title: "World War Z (2013) มหาวิบัติสงคราม Z",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/thumb/d/dc/World_War_Z_poster.jpg/250px-World_War_Z_poster.jpg",
+        url: "https://master.streamhls.com/hls/db174277ffe0ef7f6f0d182041e5510d/master.m3u8"
+    },
 ];
