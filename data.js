@@ -1261,4 +1261,85 @@ const movieDatabase = [
         poster: "https://files.thaiware.site/movie/2023-01/images-poster/230107120408b91.jpg",
         url: "https://master.streamhls.com/hls/942dc85466433855354b5121ae87f83c/master.m3u8"
     },
+    {
+        id: "m113",
+        type: "movie",
+        title: "Spider-Man (2002) ไอ้แมงมุม",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/thumb/6/6c/Spider-Man_%282002_film%29_poster.jpg/250px-Spider-Man_%282002_film%29_poster.jpg",
+        url: "https://master.streamhls.com/hls/ceca35a703e82f65769a025459288740/master.m3u8"
+    },
+    {
+        id: "m114",
+        type: "movie",
+        title: "Spider-Man 2 (2004) ไอ้แมงมุม 2",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/4/4e/Spider-Man_2_poster.jpg",
+        url: "https://master.streamhls.com/hls/fc3ed6f32fb0f2fa8a0243b787480bff/master.m3u8"
+    },
+    {
+        id: "m115",
+        type: "movie",
+        title: "Spider-Man 3 (2007) ไอ้แมงมุม 3",
+        quality: "HD",
+        category: "action",
+        poster: "https://image.tmdb.org/t/p/original/589rUff9Ai272uMudb9Dn7k88Oa.jpg",
+        url: "https://master.streamhls.com/hls/19b861e107c607d60786cad800e1a5c3/master.m3u8"
+    },
+    {
+        id: "m116",
+        type: "movie",
+        title: "The Amazing Spider-Man (2012) ดิ อะเมซิ่ง สไปเดอร์แมน",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/e/e0/The_Amazing_Spider-Man_%28film%29_poster.jpg",
+        url: "https://master.streamhls.com/hls/b12f383191fc9607614411d0ae56c002/master.m3u8"
+    },
+    {
+        id: "m117",
+        type: "movie",
+        title: "The Amazing Spider-Man 2 (2014) ดิ อะเมซิ่ง สไปเดอร์แมน 2",
+        quality: "HD",
+        category: "action",
+        poster: "https://cdni-hw.ch7.com/dm/sz-md/i/images/2025/02/27/67c04b8934a560.58412241.jpg",
+        url: "https://master.streamhls.com/hls/c0a61e921d966806e04f27b96033e641/master.m3u8"
+    },
+    {
+        id: "m118",
+        type: "movie",
+        title: "Spider-Man: Far from Home (2019) สไปเดอร์-แมน ฟาร์ ฟรอม โฮม",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2019-06/images-poster/190626100016Ah8.jpg",
+        url: "https://master.streamhls.com/hls/2bb13b36633e980cfa55a7f4859ba573/master.m3u8"
+    },
+    {
+        id: "m119",
+        type: "movie",
+        title: "Spider-Man: No Way Home (2021) สไปเดอร์แมน: โน เวย์ โฮม",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2022-08/images-poster/220831120038R7e.jpg",
+        url: "https://master.streamhls.com/hls/15eba23308c4bfe85bf43d6b7b978837/master.m3u8"
+    },
+    {
+        id: "m120",
+        type: "movie",
+        title: "Spider Man Across the Spider Verse (2023) สไปเดอร์ แมน ผงาดข้ามจักรวาลแมงมุม",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2023-05/images-poster/230504120409T79.jpg",
+        url: "https://master.streamhls.com/hls/e142c37ad41e9952ab1a7d706b1a4e12/master.m3u8"
+    },
+    {
+        id: "m121",
+        type: "movie",
+        title: "Vjeran Tomic The Spider-Man of Paris (2023) เวรัน โทมิช สไปเดอร์แมน แห่งปารีส",
+        quality: "HD",
+        category: "action",
+        poster: "https://m.media-amazon.com/images/M/MV5BNmFiMjZmYWYtZTQ4NC00ODA1LWEwMTYtZGY3YTk0ZmYxOWY5XkEyXkFqcGc@._V1_.jpg",
+        url: "https://master.streamhls.com/hls/f6b70d627488917f5e5a9d5956e012bd/master.m3u8"
+    },
 ];
