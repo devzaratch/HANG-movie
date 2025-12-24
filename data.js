@@ -1207,4 +1207,49 @@ const movieDatabase = [
         poster: "https://upload.wikimedia.org/wikipedia/th/thumb/d/dc/World_War_Z_poster.jpg/250px-World_War_Z_poster.jpg",
         url: "https://master.streamhls.com/hls/db174277ffe0ef7f6f0d182041e5510d/master.m3u8"
     },
+    {
+        id: "m107",
+        type: "movie",
+        title: "Transformers Rise of the Beasts (2023) ทรานส์ฟอร์เมอร์ส กำเนิดจักรกลอสูร",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2023-05/images-poster/230512120411211.jpg",
+        url: "https://master.streamhls.com/hls/9edbf4a0a5c175c82f9cbbcd373872ce/master.m3u8"
+    },
+    {
+        id: "m108",
+        type: "movie",
+        title: "The Creator (2023) เดอะ ครีเอเตอร์",
+        quality: "HD",
+        category: "action",
+        poster: "https://upload.wikimedia.org/wikipedia/th/thumb/9/94/The_Creator_2023_poster.jpg/250px-The_Creator_2023_poster.jpg",
+        url: "https://master.streamhls.com/hls/eb742cbcc610220dd4af878e10ea8321/master.m3u8"
+    },
+    {
+        id: "m109",
+        type: "movie",
+        title: "The Covenant (2023) เดอะ โคเวแนนท์",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2023-04/images-poster/230405120416991.jpg",
+        url: "https://master.streamhls.com/hls/6a94d77064b5047d7a18cba87daf12c4/master.m3u8"
+    },
+    {
+        id: "m110",
+        type: "movie",
+        title: "Khun pan 3 (2023) ขุนพันธ์ 3",
+        quality: "HD",
+        category: "action",
+        poster: "https://sahamongkolfilm.com/wp-content/uploads/2023/01/Khun-Pan-3-Theme-Poster02-2-New-Date.jpg",
+        url: "https://master.streamhls.com/hls/c7c1e1b7118265d5d03f9c7c2d76831c/master.m3u8"
+    },
+    {
+        id: "m111",
+        type: "movie",
+        title: "Shin Ultraman (2022) ชิน อุลตร้าแมน",
+        quality: "HD",
+        category: "action",
+        poster: "https://inwfile.com/s-fw/xexz4a.jpg",
+        url: "https://master.streamhls.com/hls/07e709ae6530bec559514cf2a2d60711/master.m3u8"
+    },
 ];
