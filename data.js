@@ -1252,4 +1252,13 @@ const movieDatabase = [
         poster: "https://inwfile.com/s-fw/xexz4a.jpg",
         url: "https://master.streamhls.com/hls/07e709ae6530bec559514cf2a2d60711/master.m3u8"
     },
+    {
+        id: "m112",
+        type: "movie",
+        title: "Gangnam Zombie (2023) คังนัมซอมบี้",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2023-01/images-poster/230107120408b91.jpg",
+        url: "https://master.streamhls.com/hls/942dc85466433855354b5121ae87f83c/master.m3u8"
+    },
 ];
