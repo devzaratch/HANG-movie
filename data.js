@@ -1033,4 +1033,85 @@ const movieDatabase = [
         poster: "https://lh3.googleusercontent.com/3NsquT44EMzNjnOxZym8g4vnTZ9A6qInGfiWC9tOuD9JabSvyX81vSxfY86aqPYCd_1-WWa8yIWVZtD5B67mo_iokaR35BCdXA=w280",
         url: "https://master.streamhls.com/hls/64016cc564929a1f3a91f0dab9ff4b67/master.m3u8"
     },
+    {
+        id: "m92",
+        type: "movie",
+        title: "Detective Dee: The Four Heavenly Kings (2018) ตี๋เหรินเจี๋ย ปริศนาพลิกฟ้า 4 จตุรเทพ",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2018-08/images-poster/1808210730076aD.jpg",
+        url: "https://master.streamhls.com/hls/0f209586b7e5ac673434679bf1d58221/master.m3u8"
+    },
+    {
+        id: "m93",
+        type: "movie",
+        title: "Guns Akimbo (2019) โทษที..มือพี่ไม่ว่าง",
+        quality: "HD",
+        category: "action",
+        poster: "https://i0.wp.com/www.patsonic.com/images/2020/06/guns-akimbo-poster.jpg?w=700&ssl=1",
+        url: "https://master.streamhls.com/hls/44fbef34df5f11baf0d1cbb3a7ca15bb/master.m3u8"
+    },
+    {
+        id: "m94",
+        type: "movie",
+        title: "The Witch: Part 2 – The Other One (2022) แม่มดมือสังหาร 2",
+        quality: "HD",
+        category: "action",
+        poster: "https://th-live-01.slatic.net/p/0532f08c098218e835a8970b71cd1e14.jpg",
+        url: "https://master.streamhls.com/hls/25014bb39fcdc1aa7c3dc93d33831110/master.m3u8"
+    },
+    {
+        id: "m95",
+        type: "movie",
+        title: "The Grinch (2018) เดอะ กริ๊นช์",
+        quality: "HD",
+        category: "anime",
+        poster: "https://lh3.googleusercontent.com/P9FJCRVQXWKFXwa5bao1ljfBMnDnS5s9QvrYCWf-i9_U2_4MHrAUwj-5yt_z850HN8qLtRvwkUAXWVOjoug=s0",
+        url: "https://master.streamhls.com/hls/9208cda5c428714e13e898b272b30028/master.m3u8"
+    },
+    {
+        id: "m96",
+        type: "movie",
+        title: "หลวงพี่กะอีปอบ (2020) The Ghoul Horror At The Howling Field",
+        quality: "HD",
+        category: "horror",
+        poster: "https://contentthailand.com/wp-content/uploads/2020/12/The-Ghoul-Poster-scaled.jpg",
+        url: "https://master.streamhls.com/hls/6972eb03f754fccb8d8e4e65b222b164/master.m3u8"
+    },
+    {
+        id: "m97",
+        type: "movie",
+        title: "Ant-Man and the Wasp: Quantumania (2023) แอนท์-แมน และ เดอะ วอสพ์: ตะลุยมิติควอนตัม",
+        quality: "HD",
+        category: "action",
+        poster: "https://kahirihome.com/wp-content/uploads/2025/10/Ant-Man-and-the-Wasp-Quantumania-2023-%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B9%8C%E2%80%91%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A7%E0%B8%AD%E0%B8%AA%E0%B8%9E%E0%B9%8C-%E0%B8%95%E0%B8%B0%E0%B8%A5%E0%B8%B8%E0%B8%A2%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4%E0%B8%84%E0%B8%A7%E0%B8%AD%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%A1-300x450-1.png",
+        url: "https://master.streamhls.com/hls/f12c512d86786ccf1a933e5b4e71a956/master.m3u8"
+    },
+    {
+        id: "m98",
+        type: "movie",
+        title: "Paws of Fury: The Legend of Hank (2022) อุ้งเท้าพิโรธ: ตำนานของแฮงค์",
+        quality: "HD",
+        category: "anime",
+        poster: "https://m.media-amazon.com/images/M/MV5BOTMxNmZhNzAtMDRiYy00Y2ExLWE0NDctOGM0YjUwMGU1YzU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        url: "https://master.streamhls.com/hls/ff59d0e14e38998281178128ae7444fc/master.m3u8"
+    },
+    {
+        id: "m99",
+        type: "movie",
+        title: "Teenage Mutant Ninja Turtles Mutant Mayhem (2023) เต่านินจา โกลาหลกลายพันธุ์",
+        quality: "HD",
+        category: "anime",
+        poster: "https://s.isanook.com/mv/0/ui/30/150099/gal-150099-20230803064559-9ef7c29.jpeg",
+        url: "https://master.streamhls.com/hls/d708a0be52ac54f3e09c3f8b0fa57d63/master.m3u8"
+    },
+    {
+        id: "m100",
+        type: "movie",
+        title: "One Piece Film: Red (2022) วันพีซ ฟิล์ม เรด",
+        quality: "HD",
+        category: "anime",
+        poster: "https://inwfile.com/s-fw/pmx84d.jpg",
+        url: "https://master.streamhls.com/hls/c9ed777258684578cb4b2c1b7305366c/master.m3u8"
+    },
 ];
