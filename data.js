@@ -1342,4 +1342,22 @@ const movieDatabase = [
         poster: "https://m.media-amazon.com/images/M/MV5BNmFiMjZmYWYtZTQ4NC00ODA1LWEwMTYtZGY3YTk0ZmYxOWY5XkEyXkFqcGc@._V1_.jpg",
         url: "https://master.streamhls.com/hls/f6b70d627488917f5e5a9d5956e012bd/master.m3u8"
     },
+    {
+        id: "m122",
+        type: "movie",
+        title: "Code 8 (2020) ล่าคนโคตรพลัง",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2020-02/images-poster/200214180035x6z.jpg",
+        url: "https://master.streamhls.com/hls/ef8b55ae5c55d372e19aeef18ef2362d/master.m3u8"
+    },
+    {
+        id: "m123",
+        type: "movie",
+        title: "Frankenstein (2025) แฟรงเกนสไตน์",
+        quality: "HD",
+        category: "action",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVklUGXH3yzI5FtPXhYOC1k6qaCQmcSGYfQ&s",
+        url: "https://master.streamhls.com/hls/8d014b5c8d5268f3b67218bbd2decce7/master.m3u8"
+    },
 ];
