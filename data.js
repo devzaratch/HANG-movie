@@ -1342,4 +1342,31 @@ const movieDatabase = [
         poster: "https://m.media-amazon.com/images/M/MV5BNmFiMjZmYWYtZTQ4NC00ODA1LWEwMTYtZGY3YTk0ZmYxOWY5XkEyXkFqcGc@._V1_.jpg",
         url: "https://master.streamhls.com/hls/f6b70d627488917f5e5a9d5956e012bd/master.m3u8"
     },
+    {
+        id: "m122",
+        type: "movie",
+        title: "Kingdom of the Planet of the Apes (2024) อาณาจักรแห่งพิภพวานร",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2024-04/images-poster/2404111204095f2.jpg",
+        url: "https://master.streamhls.com/hls/f4680d4fd039b9b6bdb1ab8fefc6db43/master.m3u8"
+    },
+    {
+        id: "m123",
+        type: "movie",
+        title: "ซองแดงแต่งผี (2025) The Red Envelope",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2025-05/images-poster/250522120445c40.jpg",
+        url: "https://master.streamhls.com/hls/57f963c5454024ad5d0b1aaccd2a57b0/master.m3u8"
+    },
+    {
+        id: "m124",
+        type: "movie",
+        title: "Hijack 1971 (2024) นรกเหนือน่านฟ้า",
+        quality: "HD",
+        category: "action",
+        poster: "https://img.pptvhd36.com/thumbor/2024/08/05/news-185fbee.jpg",
+        url: "https://master.streamhls.com/hls/5c624d297d560a9e9fc8c0dddc29bf75/master.m3u8"
+    },
 ];
