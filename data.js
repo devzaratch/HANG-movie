@@ -1516,10 +1516,37 @@ const movieDatabase = [
     {
         id: "m141",
         type: "movie",
+        title: "ขุนบันลือ Khun Bunlue (2018)",
+        quality: "HD",
+        category: "action",
+        poster: "https://files.thaiware.site/movie/2018-12/images-poster/181224073007Q64.jpg",
+        url: "https://master.streamhls.com/hls/e305b64da8cce5feb391cb6c4500b2e1/master.m3u8"
+    },
+    {
+        id: "m142",
+        type: "movie",
         title: "Us (2019) หลอน ลวง เรา",
         quality: "HD",
         category: "horror",
         poster: "https://files.thaiware.site/movie/2019-03/images-poster/190309120013133.jpg",
         url: "https://master.streamhls.com/hls/13b092535ff1cafe587f1f7b5cf94bfc/master.m3u8"
+    },
+    {
+        id: "m143",
+        type: "movie",
+        title: "It Chapter Two (2019) อิท โผล่จากนรก 2",
+        quality: "HD",
+        category: "horror",
+        poster: "https://files.thaiware.site/movie/2019-08/images-poster/190812180040dt9.jpg",
+        url: "https://master.streamhls.com/hls/4b2c6dffbd2ee543ce099d48b29d0edc/master.m3u8"
+    },
+    {
+        id: "m144",
+        type: "movie",
+        title: "The Quake (2019) มหาวิบัติแผ่นดินถล่มโลก",
+        quality: "HD",
+        category: "ັaction",
+        poster: "https://files.thaiware.site/movie/2019-02/images-poster/190219073004A91.jpg",
+        url: "https://master.streamhls.com/hls/2fbe9b93fed63d62c30cc20f0bc6baf9/master.m3u8"
     },
 ];
